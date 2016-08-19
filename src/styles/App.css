@@ -1,0 +1,25 @@
+/* Base Application Styles */
+body {
+	color: #000;
+	background: #fff;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	border: none;
+	border-radius: 0;
+	height: 2rem;
+	margin-bottom: 15px;
+}
+
+.m-slider {
+	width: 100%;
+	height: 3.873rem;
+}

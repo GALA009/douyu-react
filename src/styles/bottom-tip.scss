@@ -1,0 +1,35 @@
+.bottom-tip{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 4rem;
+	z-index: 9999;
+	background-color: rgba(0,0,0,.9);
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+
+	button {
+		background: 0;
+		border: none;
+		outline: 0;
+	}
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1.5rem;
+	height: 100%;
+}
+
+.godown {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 5rem;
+	height: 100%;
+}

@@ -1,0 +1,21 @@
+.header-top {
+    height: 1.333333333rem; 
+    .logo {
+        float: left;
+        margin: .2666666665rem 0 0 .26666667rem;
+        width: 1.93333333rem;
+        height: .8rem;
+        background-image: url(../images/icon.png);
+        background-size: 5.76rem 1.13333333rem;
+    }
+
+    .classes {
+        float: right;
+        width: 2.266666666666667rem;
+        height: .853333333rem;
+        margin-right: .426666666rem;
+        margin-top: .24rem;
+        background: url(../images/btns.png) -.48rem -1.733333333rem no-repeat;
+        background-size: 5.333333333333333rem;
+    }
+}

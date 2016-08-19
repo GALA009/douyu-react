@@ -1,0 +1,32 @@
+.logo {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.topbar {
+	position: fixed;
+	width: 100%;
+	height: 180px;
+	background-color: #c70013;
+}
+.login-from {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 56px;
+	margin: 20px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 5px rgba(0,0,0,.16);
+	z-index: 99;
+
+	h1 {
+		text-align: center;
+	}
+
+	& .input-group {
+
+	}
+}

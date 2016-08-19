@@ -1,0 +1,40 @@
+.m-row {
+    position: relative;
+    box-sizing: border-box;
+    margin-top: .26666667rem;
+    padding: 0 .13333333rem .13333333rem;
+    width: 100%;
+    background-color: #fff;
+
+    .title {
+        width: 100%;
+        height: 1.13333333rem;
+        color: #424242;
+        line-height: 1.13333333rem;
+        
+        span {
+            display: inline-block;
+            margin-left: .13333333rem;
+
+            img{
+                width: .3999999rem;
+                height: .3999999rem;
+                float: left;
+                margin-right: .16rem;
+                vertical-align: top;
+                margin-top: .3666667rem;            
+            }
+        }
+
+        a {
+            float: right;
+            margin-right: .13333333rem;
+            color: #9E9E9E;
+        }
+    }
+    .live-list:after{
+        display: block;
+        content: '';
+        clear: both;
+    }
+}

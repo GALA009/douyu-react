@@ -1,0 +1,35 @@
+.alert {
+	position: fixed;
+	left: 50%;
+	width: 60%;
+	margin-left: -30%;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #000;
+	text-align: center;
+	z-index: 99999;
+	.header {
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		padding: 10px;
+		color: #fff;
+	}
+
+	.header-info {
+		background-color: #2196F3;
+	}
+	.header-error {
+		background-color: #F44336;
+	}
+
+	.body {
+		padding: 10px;
+		text-align: left;
+	}
+
+	.footer {
+		padding: 10px;
+		border-top: 1px solid #ddd;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}	
+}
