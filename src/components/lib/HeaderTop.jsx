@@ -17,24 +17,23 @@ export default class HeaderTop extends React.Component {
     }
 
     render() {
-        let _style = {}
+        let activeStyle = {}
         if (this.state.isShowMenu) {
-            _style = {
+            activeStyle = {
                 color: '#FA7122',
                 backgroundPosition: '-.48rem -.893333333rem'
             }
         } else {
-            _style = {
+            activeStyle = {
                 backgroundPosition: '-.48rem -1.733333333rem'
             }
 
         }
-
         return (
             <div className="header-top">
                 <Link to={'/login'} className='logo'>
                 </Link>
-                <div className="classes" style={_style} onClick={this.handleClick.bind(this) } isShowMenu={this.state.isShowMenu}></div>
+                <div className="classes" style={activeStyle} onClick={this.handleClick.bind(this) } isShowMenu={this.state.isShowMenu}></div>
             </div>
         );
     }
