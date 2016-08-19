@@ -18,7 +18,7 @@ export default class HeaderNav extends React.Component {
                     return (
                         <a key={step} href={`game/${step}`}>
                             <img src={`../images/live/${step + 1}.jpg`} alt=""/>
-                            <p></p>
+                            <p>{data}</p>
                         </a>
                     )
                 })
