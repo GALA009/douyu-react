@@ -25,7 +25,7 @@ export default class HeaderNav extends React.Component {
             <div className="header-nav" style={showMenuStyle}>
                 { this.props.menu.map(function (data, step) {
                     return (
-                        <a key={step} href={`game/${step}`}>
+                        <a key={step} href='/'>
                             <div className="list-item">
                                 <img src={`../images/live/${step + 1}.jpg`} alt=""/>
                                 <p>{data}</p>
