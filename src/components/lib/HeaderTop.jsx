@@ -3,6 +3,7 @@ require('styles/HeaderTop.scss');
 import React from 'react';
 import { Link } from 'react-router';
 import HeaderNav from '../lib/HeaderNav';
+import Mask from '../lib/Mask';
 
 export default class HeaderTop extends React.Component {
     constructor(props, context) {
@@ -12,8 +13,9 @@ export default class HeaderTop extends React.Component {
         }
     }
 
-    handleClick() {
+    handleClick(e) {
         this.setState({ isShowMenu: !this.state.isShowMenu });
+        console.log(e.target)
     }
 
     render() {
@@ -33,7 +35,11 @@ export default class HeaderTop extends React.Component {
             <div className="header-top">
                 <Link to={'/login'} className='logo'>
                 </Link>
-                <div className="classes" style={activeStyle} onClick={this.handleClick.bind(this) } isShowMenu={this.state.isShowMenu}></div>
+                <div className="classes" style={activeStyle} onClick={this.handleClick.bind(this) } >
+                    <Mask isShow={this.state.isShowMenu}>
+                        <HeaderNav isShowMenu={this.state.isShowMenu}/>
+                    </Mask>
+                </div>
             </div>
         );
     }
