@@ -5,6 +5,7 @@ import React from 'react';
 import Row from './lib/Row';
 import Swiper from './lib/Swiper';
 import Header from './lib/Header';
+import Poster from './lib/Poster';
 
 export default class AppComponent extends React.Component {
 
@@ -19,6 +20,7 @@ export default class AppComponent extends React.Component {
 	render() {
 		return (
 			<div >
+				<Poster/>
 				<Header />
 				<div className='m-slider'>
 					<Swiper/>

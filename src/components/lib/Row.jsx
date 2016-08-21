@@ -15,7 +15,7 @@ export default class Row extends React.Component {
                         <img src='http://shark.douyucdn.cn/app/douyu-mobile/m-douyu/res/icon_hot.png?mv=1.1' alt={this.props.title}/>
                         {this.props.title}
                     </span>
-                    <Link to={'/login'}>
+                    <Link to={'/detail'}>
                         {this.props.link}
                     </Link>
                 </div>

@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 export default class Live extends React.Component {
     render() {
         return (
-            <Link className="live" to={'/login'}>
+            <Link className="live" to={'/detail'}>
                 <img src={this.props.img} alt="" className="live-feature"/>
                 <div className="live-title">{this.props.title}</div>
                 <div className="live-info">
