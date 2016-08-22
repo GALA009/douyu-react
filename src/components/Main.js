@@ -6,6 +6,9 @@ import Row from './lib/Row';
 import Swiper from './lib/Swiper';
 import Header from './lib/Header';
 import Poster from './lib/Poster';
+import {
+	Link
+} from 'react-router'
 
 export default class AppComponent extends React.Component {
 
@@ -20,7 +23,9 @@ export default class AppComponent extends React.Component {
 	render() {
 		return (
 			<div >
-				<Poster/>
+				<Link to="/login">
+					跳转
+				</Link>
 				<Header />
 				<div className='m-slider'>
 					<Swiper/>

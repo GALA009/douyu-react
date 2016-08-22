@@ -6,20 +6,13 @@ import Poster from './lib/Poster';
 
 export default class Detail extends React.Component {
 
-    componentWillMount() {
-
-    }
-
-    handleLogin() {
-
-    }
-
     render() {
         return (
             <div >
                 <div className="player">
                     <Video />
                     <Poster />
+                    详情页详情页详情页详情页详情页详情页详情页
                 </div>
             </div>
         );
