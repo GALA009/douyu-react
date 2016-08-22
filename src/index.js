@@ -10,18 +10,17 @@ import {
 import App from './components/Main';
 import Login from './components/Login';
 import Detail from './components/Detail';
+import List from './components/List';
 import NotFound from './components/NotFound';
 
 // Render the main component into the dom
 // ReactDOM.render(<App />, document.getElementById('app'));
 ReactDOM.render((
 	<Router history={browserHistory} >
+		<Route path="/" 		component={App}/>
 		<Route path="/login" 	component={Login} />
-		<Route path="/" 				component={App}>
-			<IndexRoute component={App}/>
-			<Route path="/index" 	component={App} />
-			<Route path="/detail" 	component={Detail} />
-		</Route>
+		<Route path="/detail" 	component={Detail} />
+		<Route path="/list" 	component={List} />
 		<Route path="*" component={NotFound} />
 	</Router>
 ), document.getElementById('app'))

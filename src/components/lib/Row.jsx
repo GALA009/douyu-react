@@ -2,7 +2,6 @@ require('styles/Row.scss');
 
 import React from 'react';
 import { Link } from 'react-router';
-import Live from '../lib/Live';
 
 export default class Row extends React.Component {
 
@@ -20,10 +19,7 @@ export default class Row extends React.Component {
                     </Link>
                 </div>
                 <div className="live-list">
-                    <Live />
-                    <Live />
-                    <Live />
-                    <Live />
+                    {this.props.children}
                 </div>
 			</div>
 		);
