@@ -5,6 +5,17 @@ import Row from './lib/Row';
 import Live from './lib/Live';
 
 export default class List extends React.Component {
+    constructor(props, context) {
+        super(props, context)
+        this.state = {
+        }
+    }
+    componentWillMount() {
+
+    }
+    componentDidMount() {
+
+    }
 
     render() {
         return (

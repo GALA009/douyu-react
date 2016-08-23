@@ -2,7 +2,9 @@ require('styles/App.css');
 require('styles/Login.scss');
 
 import React from 'react';
-import { Link } from 'react-router'
+import {
+	Link
+} from 'react-router'
 import Row from './lib/Row';
 import Swiper from './lib/Swiper';
 import Header from './lib/Header';
@@ -11,12 +13,15 @@ import Live from './lib/Live';
 
 
 export default class AppComponent extends React.Component {
+	constructor(props, context) {
+		super(props, context)
+		this.state = {}
+	}
 
 	componentWillMount() {
 
 	}
-
-	handleLogin() {
+	componentDidMount() {
 
 	}
 

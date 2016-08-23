@@ -4,6 +4,19 @@ import React from 'react';
 import { Link } from 'react-router'
 
 export default class Live extends React.Component {
+    constructor(props, context) {
+        super(props, context)
+        this.state = {
+        }
+    }
+
+    componentWillMount() {
+
+    }
+    componentDidMount() {
+
+    }
+
     render() {
         return (
             <a className="live" href="/detail">

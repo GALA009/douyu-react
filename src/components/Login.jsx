@@ -2,9 +2,14 @@ require('styles/App.css');
 require('styles/Login.scss');
 
 import React from 'react';
-import HF from '../actions/AppMethods';
+import CM from '../actions/AppMethods';
 
 export default class Login extends React.Component {
+    constructor(props, context) {
+        super(props, context)
+        this.state = {
+        }
+    }
 
 	handleLogin() {
 		let msg = {
@@ -12,7 +17,7 @@ export default class Login extends React.Component {
 			title: '错误',
 			content: '尚未完善该功能'
 		}
-		HF.alert(msg);
+		CM.alert(msg);
 	}
 
 	render() {
