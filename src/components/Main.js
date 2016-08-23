@@ -28,9 +28,6 @@ export default class AppComponent extends React.Component {
 	render() {
 		return (
 			<div >
-				<Link to="/login">
-					跳转
-				</Link>
 				<Header />
 				<div className='m-slider'>
 					<Swiper/>
