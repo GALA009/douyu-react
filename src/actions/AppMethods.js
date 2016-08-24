@@ -2,7 +2,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BASE_URL } from 'AppConstants'
+import { BASE_URL } from './AppConstants'
 import Alert from '../components/lib/Alert'
 
 export default {
