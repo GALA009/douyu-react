@@ -10,6 +10,7 @@ import Swiper from './lib/Swiper';
 import Header from './lib/Header';
 import Poster from './lib/Poster';
 import Live from './lib/Live';
+import More from './lib/More';
 
 
 export default class AppComponent extends React.Component {
@@ -58,7 +59,7 @@ export default class AppComponent extends React.Component {
 					<Live />
 					<Live />
 				</Row>
-
+                <More />
 			</div>
 		);
 	}
