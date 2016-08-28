@@ -5,6 +5,7 @@ import Video from './lib/Video';
 import Poster from './lib/Poster';
 import Row from './lib/Row';
 import Live from './lib/Live';
+import Header from './lib/Header';
 
 export default class Detail extends React.Component {
 	constructor(props, context) {
@@ -22,6 +23,7 @@ export default class Detail extends React.Component {
 	render() {
 		return (
 			<div >
+				<Header />
 				<div className="player">
 					<Video />
 					<Poster />

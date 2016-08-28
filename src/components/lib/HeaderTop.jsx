@@ -33,7 +33,7 @@ export default class HeaderTop extends React.Component {
         }
         return (
             <div className="header-top">
-                <Link to={'/login'} className='logo'>
+                <Link to={'/'} className='logo'>
                 </Link>
                 <div className="classes" style={activeStyle} onClick={this.handleClick.bind(this) } >
                     <Mask isShow={this.state.isShowMenu}>
