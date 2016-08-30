@@ -22,3 +22,13 @@ input[type="password"] {
 	width: 100%;
 	height: 3.873rem;
 }
+
+.split-line{
+	position: absolute;
+    top: .42666667rem;
+    right: 0;
+    display: inline-block;
+    height: .58666667rem;
+    width: 1px;
+    background-color: #DDD;
+}
