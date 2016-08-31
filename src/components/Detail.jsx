@@ -6,6 +6,8 @@ import Poster from './lib/Poster';
 import Row from './lib/Row';
 import Live from './lib/Live';
 import Header from './lib/Header';
+import ImageGroup from './lib/ImageGroup';
+import InfoRoom from './lib/InfoRoom';
 
 export default class Detail extends React.Component {
 	constructor(props, context) {
@@ -29,16 +31,15 @@ export default class Detail extends React.Component {
 					<Poster />
 				</div>
 				<div className="info-area">
-					<div className="info-room">
-						<img src="" alt=""/>
-						<div className="dy-info">
-							<p className="dy-name-content">
-								主播：<span className="dy-name">果冻</span>
-							</p>
-							<p className="online-content">
-							共<span className="online">108.8万</span>人正在观看
-							</p>
-						</div>
+					<InfoRoom src="https://apic.douyucdn.cn/upload/avatar/004/75/73/14_avatar_middle.jpg" dyName="White55开" onlineNum="80w"/>
+					<div className="info-handle">
+						<ImageGroup src="../images/hd-send.png" title="发弹幕">
+							<b className="split-line"></b>
+						</ImageGroup>
+						<ImageGroup src="../images/hd-focus.png" title="关注">
+							<b className="split-line"></b>
+						</ImageGroup>						
+						<ImageGroup src="../images/hd-share.png" title="分享"/>						
 					</div>
 				</div>
 				<Row title='同类直播'>

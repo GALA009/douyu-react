@@ -12,8 +12,8 @@ export default class ImageGroup extends React.Component {
     render() {
         return (
             <div className="image-group">
-                <img className="icon" src="../images/hd-send.png" alt=""/>
-                发弹幕
+                <img className="icon" src={this.props.src} alt=""/>
+                {this.props.title}
                 {this.props.children}
             </div>
         );

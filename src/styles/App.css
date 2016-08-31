@@ -9,6 +9,10 @@ body {
 a {
 	text-decoration: none;
 }
+
+p{
+	margin: 0;
+}
 input[type="text"],
 input[type="password"] {
 	width: 100%;

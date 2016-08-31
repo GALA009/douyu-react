@@ -1,0 +1,36 @@
+.info-room {
+    height: 1.62666667rem;
+
+    .dy-photo {
+        width: 1.06666667rem;
+        height: 1.06666667rem;
+        vertical-align: top;
+        margin-top: .32rem;
+        border-radius: .53333333rem;
+    }
+
+    .dy-info {
+        display: inline-block;
+        margin-top: .32rem;
+        padding-left: .13333333rem;
+        line-height: .53333333rem;
+
+        .dy-name-content {
+            color: #333;
+            font-size: .37333333rem;
+            max-width: 4.98666667rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .online-content {
+            color: #666;
+            font-size: .32rem;
+
+            .online {
+                color: #fa7221;
+            }
+        }
+    }
+}
