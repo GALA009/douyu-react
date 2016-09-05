@@ -13,9 +13,8 @@ export default class HeaderTop extends React.Component {
         }
     }
 
-    handleClick(e) {
+    handleClick() {
         this.setState({ isShowMenu: !this.state.isShowMenu });
-        console.log(e.target)
     }
 
     render() {

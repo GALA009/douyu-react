@@ -24,10 +24,10 @@ export default class Detail extends React.Component {
                         主播：<span className="dy-name">{this.props.dyName}</span>
                     </p>
                     <p className="online-content">
-                    共<span className="online">{this.props.onlineNum}</span>人正在观看
+						共<span className="online">{this.props.onlineNum}</span>人正在观看
                     </p>
                 </div>
-            </div>		
+            </div>
 		);
 	}
 }

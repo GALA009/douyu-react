@@ -8,11 +8,11 @@ import Alert from '../components/lib/Alert'
 export default {
 	//POST方法
 	callPostApi(params, cb) {
-		if (typeof params.url === "undefined") {
+		if (typeof params.url === 'undefined') {
 			console.log('请指定 url 参数')
-			return false
+			return false;
 		}
-		if (typeof params.data === "undefined") {
+		if (typeof params.data === 'undefined') {
 			params.data = {}
 		}
 
@@ -20,19 +20,19 @@ export default {
 			.post(BASE_URL + params.url)
 			.set('Accept', 'application/json')
 			.set('Content-Type', 'application/x-www-form-urlencoded')
-			.set('sToken', sessionStorage.getItem("token"))
+			.set('sToken', sessionStorage.getItem('token'))
 			.send(params.data)
 			.end(cb)
-		},
+	},
 
 	//GET方法
 	callGetApi(params, cb) {
-		if (typeof params.url === "undefined") {
+		if (typeof params.url === 'undefined') {
 			console.log('请指定 url 参数')
-			return false
+			return false;
 		}
-		if (typeof params.data === "undefined") {
-			params.data = {}
+		if (typeof params.data === 'undefined') {
+			params.data = {};
 		}
 
 		request

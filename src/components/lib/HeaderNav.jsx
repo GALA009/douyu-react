@@ -19,7 +19,7 @@ export default class HeaderNav extends React.Component {
 		}else{
 			showMenuStyle = {
 				display: 'none'
-			}			
+			};
 		}
         return (
             <div className="header-nav" style={showMenuStyle}>

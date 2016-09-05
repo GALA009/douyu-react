@@ -14,10 +14,10 @@ export default class Swiper extends React.Component {
             touchStartX: undefined, //触摸起点X
             touchStartY: undefined, //触摸起点Y
             touchMoveX: undefined,  //触摸移动X距离
-            touchMoveY: undefined,  //触摸移动Y距离            
+            touchMoveY: undefined,  //触摸移动Y距离
             touchEndX: undefined,   //触摸终点X
             touchEndY: undefined,   //触摸终点Y
-            wrapperWidth: undefined,    //元素宽度
+            wrapperWidth: undefined    //元素宽度
         }
     }
 
@@ -67,7 +67,7 @@ export default class Swiper extends React.Component {
     }
 
     touchStart(e) {
-        console.log('touchStart')
+        // console.log('touchStart')
         this.setState({ touchStartX: e.touches[0].pageX });
     }
 
@@ -81,10 +81,10 @@ export default class Swiper extends React.Component {
         touchMoveX = e.touches[0].pageX
         direction = touchStartX - touchMoveX
 
-        console.log('touchMove')
-        console.log(clickNum)
-        console.log(touchStartX)
-        console.log(direction)
+        // console.log('touchMove')
+        // console.log(clickNum)
+        // console.log(touchStartX)
+        // console.log(direction)
 
         this.refs.wrapper.style.webkitTransform = 'translate3d(-' + ((clickNum * wrapperWidth) + parseInt(direction)) + 'px,0,0)';
         e.preventDefault();
@@ -93,7 +93,7 @@ export default class Swiper extends React.Component {
     }
 
     touchEnd(e) {
-        console.log('touchEnd')
+        //console.log('touchEnd')
 
         let direction = this.state.touchMoveX;  //起终点坐标差异 > 0 向右滑动,  <0 向左滑动
         let itemLength = this.refs.wrapper.childNodes.length;   //元素个数
@@ -111,11 +111,11 @@ export default class Swiper extends React.Component {
         // }
 
         CM.removeClass(this.refs.pagination.childNodes.item(clickNum), 'active')
-        console.log(direction);
+        //console.log(direction);
         //判断手指移动方向和移动距离
         //向左滑动
         if (direction < 0 && Math.abs(direction) > 100) {
-            console.log('left')
+            //console.log('left')
             if (clickNum == 0) {
                 clickNum = itemLength - 1;
             } else {
@@ -124,7 +124,7 @@ export default class Swiper extends React.Component {
         }
         //向右滑动
         else if (direction > 0 && Math.abs(direction) > 100) {
-            console.log('right')
+            //console.log('right')
             if (clickNum == itemLength - 1) {
                 clickNum = 0;
             } else {

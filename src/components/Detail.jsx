@@ -38,8 +38,8 @@ export default class Detail extends React.Component {
 						</ImageGroup>
 						<ImageGroup src="../images/hd-focus.png" title="关注">
 							<b className="split-line"></b>
-						</ImageGroup>						
-						<ImageGroup src="../images/hd-share.png" title="分享"/>						
+						</ImageGroup>
+						<ImageGroup src="../images/hd-share.png" title="分享"/>
 					</div>
 				</div>
 				<Row title='同类直播'>
@@ -54,7 +54,7 @@ export default class Detail extends React.Component {
 					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
 					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
 				</Row>
-				
+
 			</div>
 		);
 	}

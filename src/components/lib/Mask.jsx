@@ -11,17 +11,17 @@ export default class HeaderNav extends React.Component {
 
     render() {
         let showStyle
-		if(this.props.isShow){
-			showStyle = {
-				display: 'block',
+        if (this.props.isShow) {
+            showStyle = {
+                display: 'block',
                 zIndex: 10
-			}
-		}else{
-			showStyle = {
-				display: 'none',
+            }
+        } else {
+            showStyle = {
+                display: 'none',
                 zIndex: 0
-			}			
-		}
+            }
+        }
 
         return (
             <div className="mask" style={showStyle}>

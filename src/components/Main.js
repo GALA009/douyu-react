@@ -2,16 +2,11 @@ require('styles/App.css');
 require('styles/Login.scss');
 
 import React from 'react';
-import {
-	Link
-} from 'react-router'
 import Row from './lib/Row';
 import Swiper from './lib/Swiper';
 import Header from './lib/Header';
-import Poster from './lib/Poster';
 import Live from './lib/Live';
 import More from './lib/More';
-
 
 export default class AppComponent extends React.Component {
 	constructor(props, context) {
