@@ -20,7 +20,6 @@ export default class AppComponent extends React.Component {
 	componentDidMount() {
 
 	}
-
 	render() {
 		return (
 			<div >

@@ -13,7 +13,9 @@ export default class HeaderTop extends React.Component {
         }
     }
 
-    handleClick() {
+    handleClick(e) {
+        let isShowMenu = this.state.isShowMenu
+        document.body.style.overflow = isShowMenu ? 'auto' : 'hidden'
         this.setState({ isShowMenu: !this.state.isShowMenu });
     }
 
@@ -28,7 +30,6 @@ export default class HeaderTop extends React.Component {
             activeStyle = {
                 backgroundPosition: '-.48rem -1.733333333rem'
             }
-
         }
         return (
             <div className="header-top">
