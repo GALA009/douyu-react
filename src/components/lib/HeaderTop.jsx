@@ -13,7 +13,7 @@ export default class HeaderTop extends React.Component {
         }
     }
 
-    handleClick(e) {
+    handleClick() {
         let isShowMenu = this.state.isShowMenu
         document.body.style.overflow = isShowMenu ? 'auto' : 'hidden'
         this.setState({ isShowMenu: !this.state.isShowMenu });
