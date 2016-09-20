@@ -1,3 +1,11 @@
+/*
+* 模块名： Swiper
+* 简介：轮播广告
+    左右滑动切换广告，目前只有滑动后可切换，没有自动切换
+* 传参： 
+    data: 轮播内容，用来判断输出轮播个数
+* 
+*/
 require('styles/Swiper.scss');
 
 import React from 'react';

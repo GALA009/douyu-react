@@ -1,11 +1,17 @@
+/*
+* 模块名： Row
+* 简介：频道组合模块
+        显示频道名字，推荐房间
+* 传参： 
+    title： 标题
+* 
+*/
 require('styles/Row.scss');
 
 import React from 'react';
 import { Link } from 'react-router';
 
 export default class Row extends React.Component {
-
-
 	render() {
 		return (
 			<div className="m-row">
@@ -28,7 +34,4 @@ export default class Row extends React.Component {
 
 Row.defaultProps = {
     title: '魔术师',
-    dyname: '820倚天剑',
-    popu: '84.5',
-    img: 'https://rpic.douyucdn.cn/z1608/05/13/507882_160805134513.jpg'
 };
