@@ -1,3 +1,12 @@
+/*
+* 模块名： ImageGroup
+* 简介：图片组合
+        左侧图片，右侧简介
+* 传参： 
+    title: 标题
+    children: 上层需要输出模块比如 分割线
+* 
+*/
 require('styles/ImageGroup.scss');
 
 import React from 'react';

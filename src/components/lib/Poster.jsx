@@ -1,3 +1,11 @@
+/*
+* 模块名： Mask
+* 简介：全图蒙版
+        灰色全屏底图
+* 传参： 
+    children： 上层需要显示内容
+* 
+*/
 require('styles/Poster.scss');
 
 import React from 'react';

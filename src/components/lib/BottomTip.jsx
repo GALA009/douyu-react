@@ -1,3 +1,9 @@
+/*
+* 模块名： BottomTip
+* 简介：底部广告
+* 传参： 无
+* 
+*/
 require('styles/bottom-tip.scss');
 
 import React from 'react';
@@ -42,7 +48,6 @@ export default class BottomTip extends React.Component {
 		else if (this.state.userTag == 3) {
 			console.log('微软平台');
 		}
-
 	}
 
 	render() {

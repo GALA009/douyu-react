@@ -1,8 +1,18 @@
+/*
+* 模块名： InfoRoom
+* 简介：频道简介
+        左侧图片，右侧简介
+* 传参： 
+    src: 图片地址
+    dyName: 主播名
+	onlineNum：观看人数
+* 
+*/
 require('styles/InfoRoom.scss');
 
 import React from 'react';
 
-export default class Detail extends React.Component {
+export default class InfoRoom extends React.Component {
 	constructor(props, context) {
 		super(props, context)
 		this.state = {}

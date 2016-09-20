@@ -1,8 +1,16 @@
+/*
+* 模块名： Mask
+* 简介：全图蒙版
+        灰色全屏底图
+* 传参： 
+    children： 上层需要显示内容
+* 
+*/
 require('styles/Mask.scss');
 
 import React from 'react';
 
-export default class HeaderNav extends React.Component {
+export default class Mask extends React.Component {
     constructor(props, context) {
         super(props, context)
         this.state = {

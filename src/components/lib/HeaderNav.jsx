@@ -1,3 +1,10 @@
+/*
+* 模块名： HeaderNav
+* 简介：顶部导航子菜单
+* 传参： 
+    menu: 子菜单标题，类型为数组
+* 
+*/
 require('styles/HeaderNav.scss');
 
 import React from 'react';

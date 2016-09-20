@@ -1,3 +1,9 @@
+/*
+* 模块名： HeaderNav
+* 简介：顶部导航logo
+* 传参： 无
+* 
+*/
 require('styles/HeaderTop.scss');
 
 import React from 'react';

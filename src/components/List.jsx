@@ -1,3 +1,7 @@
+/*
+* 文件名： List
+* 所属：频道列表页
+*/
 require('styles/List.scss');
 
 import React from 'react';

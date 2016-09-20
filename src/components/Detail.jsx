@@ -1,3 +1,7 @@
+/*
+* 文件名： Detail
+* 所属：频道详情页
+*/
 require('styles/Detail.scss');
 
 import React from 'react';

@@ -1,3 +1,14 @@
+/*
+* 模块名： Live
+* 简介：房间小模块
+        显示房间图片，标题，观看人数等信息
+* 传参： 
+    img: 图片地址
+    title: 上主播名    
+    dyName: 主播名
+	popu：观看人数
+* 
+*/
 require('styles/Live.scss')
 
 import React from 'react';

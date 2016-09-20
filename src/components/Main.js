@@ -1,3 +1,7 @@
+/*
+* 文件名： Main
+* 所属：主页
+*/
 require('styles/App.css');
 require('styles/Login.scss');
 
