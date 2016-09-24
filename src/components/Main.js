@@ -12,7 +12,7 @@ import Header from './lib/Header';
 import Live from './lib/Live';
 import More from './lib/More';
 
-export default class AppComponent extends React.Component {
+export default class Main extends React.Component {
 	constructor(props, context) {
 		super(props, context)
 		this.state = {}
