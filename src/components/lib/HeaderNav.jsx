@@ -1,13 +1,14 @@
 /*
 * 模块名： HeaderNav
 * 简介：顶部导航子菜单
-* 传参： 
+* 传参：
     menu: 子菜单标题，类型为数组
-* 
+*
 */
 require('styles/HeaderNav.scss');
 
 import React from 'react';
+import {Link} from 'react-router';
 
 export default class HeaderNav extends React.Component {
     constructor(props, context) {
@@ -32,12 +33,12 @@ export default class HeaderNav extends React.Component {
             <div className="header-nav" style={showMenuStyle}>
                 { this.props.menu.map(function (data, step) {
                     return (
-                        <a key={step} href='/list' title={data}>
+                        <Link key={step} to='list' title={data}>
                             <div className="list-item">
                                 <img src={`../images/live/${step + 1}.jpg`} alt=""/>
                                 <p>{data}</p>
                             </div>
-                        </a>
+                        </Link>
                     )
                 })
                 }

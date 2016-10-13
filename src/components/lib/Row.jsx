@@ -2,9 +2,9 @@
 * 模块名： Row
 * 简介：频道组合模块
         显示频道名字，推荐房间
-* 传参： 
+* 传参：
     title： 标题
-* 
+*
 */
 require('styles/Row.scss');
 
@@ -33,5 +33,5 @@ export default class Row extends React.Component {
 }
 
 Row.defaultProps = {
-    title: '魔术师',
+    title: '魔术师'
 };

@@ -1,3 +1,10 @@
+/*
+* 模块名： Video
+* 简介：视频组件
+    播放视频文件
+* 传参： 无
+*
+*/
 require('styles/Video.scss');
 
 import React from 'react';

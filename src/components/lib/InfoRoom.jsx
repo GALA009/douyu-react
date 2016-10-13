@@ -2,11 +2,11 @@
 * 模块名： InfoRoom
 * 简介：频道简介
         左侧图片，右侧简介
-* 传参： 
+* 传参：
     src: 图片地址
     dyName: 主播名
 	onlineNum：观看人数
-* 
+*
 */
 require('styles/InfoRoom.scss');
 

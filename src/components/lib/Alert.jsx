@@ -1,11 +1,11 @@
 /*
 * 模块名： Alert
 * 简介：弹出框
-* 传参： 
+* 传参：
 		type : 类型,可传入info/error  info标题栏为蓝色  error标题栏为红色
 		title： 标题
 		content： 内容
-* 
+*
 */
 require('styles/App.css');
 require('styles/Alert.scss');
@@ -41,7 +41,7 @@ export default class Alert extends React.Component {
 		return (
 			<div className="alert">
 				<div className="content" style={this.state.nodeStyle}>
-					<div className={'header header-'+this.props.data.type}>{this.props.data.title}</div>				
+					<div className={'header header-'+this.props.data.type}>{this.props.data.title}</div>
 					<div className="body">{this.props.data.content}</div>
 					<div className="footer"><a href="#" onClick={this.unmount}>好</a></div>
 				</div>

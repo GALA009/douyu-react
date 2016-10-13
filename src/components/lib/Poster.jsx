@@ -2,13 +2,15 @@
 * 模块名： Mask
 * 简介：全图蒙版
         灰色全屏底图
-* 传参： 
+* 传参：
     children： 上层需要显示内容
-* 
+*
 */
 require('styles/Poster.scss');
 
 import React from 'react';
+
+const bg = require('../../images/1.jpg')
 
 export default class Poster extends React.Component {
     constructor(props, context) {
@@ -20,7 +22,7 @@ export default class Poster extends React.Component {
     render() {
         return (
             <div className="poster">
-                <img src="../images/1.jpg" alt=""/>
+                <img src={bg} alt=""/>
                 <div className="play-btn"></div>
                 <div className="room-info">
                     <span className='name'>Miss大小姐排位日记</span>

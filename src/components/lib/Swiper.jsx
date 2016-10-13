@@ -178,7 +178,7 @@ export default class Swiper extends React.Component {
             return (
                 <div className="swiper-slide" key={step}>
                     <Link to="/">
-                        <img src={`../images/${(step + 1)}.jpg`} alt=""/>
+                        <img src={`./images/${(step + 1)}.jpg`} alt=""/>
                     </Link>
                 </div>
             )
