@@ -19,6 +19,7 @@ export default class Swiper extends React.Component {
         super(props, context)
         this.state = {
             isClick: 0, //当前轮播图片编号
+            oldActive: 0,//上一次焦点图编号
             touchStartX: undefined, //触摸起点X
             touchStartY: undefined, //触摸起点Y
             touchMoveX: undefined,  //触摸移动X距离
@@ -35,20 +36,19 @@ export default class Swiper extends React.Component {
     componentDidMount() {
         let _this = this;
         let isClick = this.state.isClick;
-        let itemLength = this.refs.wrapper.childNodes.length;   //元素个数    
+        let itemLength = this.refs.wrapper.childNodes.length;   //元素个数
         let wrapperWidth = this.refs.wrapper.clientWidth;   //元素宽度
+        console.log('isClick->'+isClick)
 
         CM.addClass(this.refs.pagination.childNodes.item(0), ' active');
-        this.refs.wrapper.style.webkitTransform = 'translate3d(0,0,0)';
+        this.refs.wrapper.style.transform = 'translate3d(0,0,0)';
 
         this.setState({ wrapperWidth: this.refs.wrapper.clientWidth })
 
         // setInterval(function () {
 
-        //     console.log(isClick)
-
         //     if (isClick == -1) {
-        //         CM.removeClass(_this.refs.pagination.childNodes.item(isClick), 'active')
+        //         // CM.removeClass(_this.refs.pagination.childNodes.item(0), 'active')
         //         CM.removeClass(_this.refs.pagination.childNodes.item(itemLength - 1), 'active');
         //     }
         //     else {
@@ -57,9 +57,8 @@ export default class Swiper extends React.Component {
 
         //     isClick++;
 
-        //     console.log(isClick)
-
-        //     _this.refs.wrapper.style.webkitTransform = 'translate3d(-' + (isClick * wrapperWidth) + 'px,0,0)';
+        //     _this.refs.wrapper.style.transform = 'translate3d(-' + (isClick * wrapperWidth) + 'px,0,0)';
+        //     _this.refs.wrapper.style.transitionDuration = '300ms'
 
         //     if (isClick == (itemLength - 1)) {
         //         CM.addClass(_this.refs.pagination.childNodes.item(isClick), ' active')
@@ -70,12 +69,10 @@ export default class Swiper extends React.Component {
         //         CM.addClass(_this.refs.pagination.childNodes.item(isClick), ' active')
         //     }
 
-
         // }, 3000)
     }
 
     touchStart(e) {
-        // console.log('touchStart')
         this.setState({ touchStartX: e.touches[0].pageX });
     }
 
@@ -89,41 +86,27 @@ export default class Swiper extends React.Component {
         touchMoveX = e.touches[0].pageX
         direction = touchStartX - touchMoveX
 
-        // console.log('touchMove')
-        // console.log(clickNum)
-        // console.log(touchStartX)
-        // console.log(direction)
-
-        this.refs.wrapper.style.webkitTransform = 'translate3d(-' + ((clickNum * wrapperWidth) + parseInt(direction)) + 'px,0,0)';
+        //this.refs.wrapper.style.transform = 'translate3d(-' + ((clickNum * wrapperWidth) + parseInt(direction)) + 'px,0,0)';
         e.preventDefault();
         this.setState({ touchMoveX: direction });
 
     }
 
     touchEnd(e) {
-        //console.log('touchEnd')
 
         let direction = this.state.touchMoveX;  //起终点坐标差异 > 0 向右滑动,  <0 向左滑动
         let itemLength = this.refs.wrapper.childNodes.length;   //元素个数
         let clickNum = this.state.isClick;  //当前点击图片编号
+        let oldActive = clickNum;  //上次焦点
         let touchStartX = this.state.touchStartX;   //触摸起点
         let touchEndX = this.state.touchEndX;   //触摸终点
         let wrapperWidth = this.refs.wrapper.clientWidth;
 
-        let re = new RegExp("\-\d{2,4}\w{2}");
-        let moveX = (this.refs.wrapper.style.transform).match(re);
-
-
-        // if (touchEndX !== undefined) {
-        //     direction = touchEndX - touchStartX;
-        // }
-
+        console.log('clickNum->'+clickNum)
         CM.removeClass(this.refs.pagination.childNodes.item(clickNum), 'active')
-        //console.log(direction);
         //判断手指移动方向和移动距离
         //向左滑动
         if (direction < 0 && Math.abs(direction) > 100) {
-            //console.log('left')
             if (clickNum == 0) {
                 clickNum = itemLength - 1;
             } else {
@@ -132,7 +115,6 @@ export default class Swiper extends React.Component {
         }
         //向右滑动
         else if (direction > 0 && Math.abs(direction) > 100) {
-            //console.log('right')
             if (clickNum == itemLength - 1) {
                 clickNum = 0;
             } else {
@@ -142,31 +124,37 @@ export default class Swiper extends React.Component {
         CM.addClass(this.refs.pagination.childNodes.item(clickNum), ' active')
 
         if (clickNum == 0) {
-            this.refs.wrapper.style.webkitTransform = 'translate3d(0,0,0)';
-        }
-        else if (clickNum == (itemLength - 1)) {
-            this.refs.wrapper.style.webkitTransform = 'translate3d(-' + (clickNum * wrapperWidth) + 'px,0,0)';
+            this.refs.wrapper.style.transform = 'translate3d(0,0,0)';
         }
         else {
-            this.refs.wrapper.style.webkitTransform = 'translate3d(-' + (clickNum * wrapperWidth) + 'px,0,0)';
+            this.refs.wrapper.style.transform = 'translate3d(-' + (clickNum * wrapperWidth) + 'px,0,0)';
         }
+        this.refs.wrapper.style.transitionDuration = '300ms'
 
-        this.setState({ isClick: clickNum });
-        this.setState({ touchEndX: undefined });
+        this.setState({
+            isClick: clickNum,
+            oldActive: oldActive,
+            touchEndX: undefined
+        });
     }
 
     handleClick(e) {
         let active = e.target.getAttribute('data-item-num');    //点击导航序号
         let wrapperWidth = this.refs.wrapper.clientWidth;
+        let oldActive = this.state.isClick;
 
         if (active === null || active === this.state.isClick) return false;
 
         CM.removeClass(this.refs.pagination.childNodes.item(this.state.isClick), 'active')
 
-        this.refs.wrapper.style.webkitTransform = 'translate3d(-' + (active * wrapperWidth) + 'px,0,0)';
+        this.refs.wrapper.style.transform = 'translate3d(-' + (active * wrapperWidth) + 'px,0,0)';
+        this.refs.wrapper.style.transitionDuration = '300ms';
 
         CM.addClass(this.refs.pagination.childNodes.item(active), ' active');
-        this.setState({ isClick: active });
+        this.setState({
+            isClick: active,
+            oldActive: oldActive
+        });
     }
 
     render() {
