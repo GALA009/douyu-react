@@ -17,11 +17,7 @@ ReactDOM.render((
 	<Router history={hashHistory}>
 		<Route path="/login" component={Login} />
 		<Route path="/" component={App}>
-<<<<<<< HEAD
-      		<IndexRoute component={Index}/>		
-=======
       		<IndexRoute component={Index}/>
->>>>>>> 6ae841e110c48be7bb114cc74a3cf19c13f4f977
 			<Route path="/index" component={Index} />
 			<Route path="/detail" component={Detail} />
 			<Route path="/list" component={List} />

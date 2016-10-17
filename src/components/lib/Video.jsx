@@ -3,11 +3,6 @@
 * 简介：视频组件
     播放视频文件
 * 传参： 无
-<<<<<<< HEAD
-*
-=======
-* 
->>>>>>> d697ce5f674d3a7b7e98c31ca019d236fe2e2cf5
 */
 require('styles/Video.scss');
 

@@ -6,6 +6,7 @@ require('styles/App.css');
 require('styles/Login.scss');
 
 import React from 'react';
+import DY from '../actions/AppMethods';
 import Row from './lib/Row';
 import Swiper from './lib/Swiper';
 import Header from './lib/Header';
@@ -21,8 +22,16 @@ export default class Main extends React.Component {
 	componentWillMount() {
 
 	}
-	componentDidMount() {
-
+	componentDidMount(data) {
+		DY.callGetApi({url:'v1/live/lol', data: data}, function(error, res){
+			if(error) {
+				console.log(error)
+			}
+			else{
+				console.log(res)
+				console.log('999999999999999999999999');
+			}
+		})
 	}
 	render() {
 		return (
