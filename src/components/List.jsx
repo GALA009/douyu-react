@@ -20,9 +20,7 @@ export default class List extends React.Component {
 
     }
     componentDidMount() {
-        console.log(this.props.menu);
-        console.log(this.props.params.type);
-        console.log(this.props.menu[this.props.params.type])
+
     }
 
     render() {
