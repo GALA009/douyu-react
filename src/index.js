@@ -20,7 +20,7 @@ ReactDOM.render((
       		<IndexRoute component={Index}/>
 			<Route path="/index" component={Index} />
 			<Route path="/detail" component={Detail} />
-			<Route path="/list" component={List} />
+			<Route path="/list:type" component={List} />
 		</Route>
 		<Route path="*" component={NotFound} />
 	</Router>

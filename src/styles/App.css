@@ -22,6 +22,9 @@ input[type="password"] {
 	margin-bottom: 15px;
 }
 
+#app {
+	background-color: #eee;
+}
 .m-slider {
 	width: 100%;
 	height: 3.873rem;

@@ -28,7 +28,7 @@ export default class Main extends React.Component {
 				console.log(error)
 			}
 			else{
-				console.log(res)
+				console.log(res.body)
 				console.log('999999999999999999999999');
 			}
 		})

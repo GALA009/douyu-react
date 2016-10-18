@@ -36,9 +36,10 @@ export default {
 			params.data = {};
 		}
 		console.log(BASE_URL)
-		console.log(params)		
+		console.log(params)
 		request
 			.get(BASE_URL + params.url)
+			.accept('text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8')
 			.withCredentials()
 			.query(params.data)
 			.end(cb)

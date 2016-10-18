@@ -17,17 +17,19 @@ export default class List extends React.Component {
         }
     }
     componentWillMount() {
-       
+
     }
     componentDidMount() {
-
+        console.log(this.props.menu);
+        console.log(this.props.params.type);
+        console.log(this.props.menu[this.props.params.type])
     }
 
     render() {
         return (
             <div>
                 <Header />
-                <Row title='最热直播' link='全部 >'>
+                <Row title={this.props.menu[this.props.params.type]} link='全部 >'>
                     <Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
                     <Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
                     <Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
@@ -49,4 +51,21 @@ export default class List extends React.Component {
             </div>
         );
     }
+}
+
+List.defaultProps = {
+    menu: [
+        '英雄联盟',
+        'DOTA2',
+        '穿越火线',
+        '炉石传说',
+        '守望先锋',
+        '魔兽世界',
+        '风暴英雄',
+        '地下城与勇士',
+        'Pokemon Go',
+        '使命召唤',
+        '星际争霸',
+        '暗黑破坏神3'
+    ]
 }

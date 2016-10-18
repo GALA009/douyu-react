@@ -17,7 +17,6 @@ export default class HeaderNav extends React.Component {
         }
     }
 
-
     render() {
 		let showMenuStyle
 		if(this.props.isShowMenu){
@@ -33,7 +32,7 @@ export default class HeaderNav extends React.Component {
             <div className="header-nav" style={showMenuStyle}>
                 { this.props.menu.map(function (data, step) {
                     return (
-                        <Link key={step} to='list' title={data}>
+                        <Link key={step} to={`list${step}`} step={step}>
                             <div className="list-item">
                                 <img src={`../images/live/${step + 1}.jpg`} alt=""/>
                                 <p>{data}</p>
