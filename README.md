@@ -2,7 +2,7 @@
 使用react 写斗鱼移动端
 
 ##效果
-<img src="https://github.com/genmmao/MarkdownPhotos/blob/master/douyu-react/20161120_160940.gif" width="640" height="350" alt="盒子介绍"/>
+<img src="https://github.com/genmmao/MarkdownPhotos/blob/master/douyu-react/20161120_160940.gif" width="414" height="736" alt="react"/>
 
 
 ##使用
