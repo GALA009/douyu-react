@@ -25,7 +25,7 @@ export default class Poster extends React.Component {
                 <img src={bg} alt=""/>
                 <div className="play-btn"></div>
                 <div className="room-info">
-                    <span className='name'>Miss大小姐排位日记</span>
+                    <span className='name'>Wihte55开</span>
                     <span className="class">英雄联盟</span>
                 </div>
                 <div className="room-stop-focus">
