@@ -12,6 +12,7 @@ import Swiper from './lib/Swiper';
 import Header from './lib/Header';
 import Live from './lib/Live';
 import More from './lib/More';
+import BottomTip from './lib/BottomTip';
 
 export default class Main extends React.Component {
 	constructor(props, context) {
@@ -67,6 +68,7 @@ export default class Main extends React.Component {
 					<Live />
 				</Row>
                 <More />
+				<BottomTip />
 			</div>
 		);
 	}

@@ -4,7 +4,7 @@
 * 传参： 无
 * 
 */
-require('styles/bottom-tip.scss');
+require('styles/Bottom-tip.scss');
 
 import React from 'react';
 
