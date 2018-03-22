@@ -4,7 +4,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import request from 'superagent'
 import Alert from '../components/lib/Alert'
-const BASE_URL = 'http://api.douyutv.com/api/';
+import AppConstants from './AppConstants'
+
+const BASE_URL = AppConstants.BASE_URL
 
 export default {
 	//POST方法
@@ -35,7 +37,6 @@ export default {
 		if (typeof params.data === 'undefined') {
 			params.data = {};
 		}
-		console.log(BASE_URL)
 		console.log(params)
 		request
 			.get(BASE_URL + params.url)

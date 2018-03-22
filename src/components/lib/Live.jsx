@@ -41,10 +41,3 @@ export default class Live extends React.Component {
         )
     }
 }
-
-Live.defaultProps = {
-    title: '魔术师',
-    dyname: '820倚天剑',
-    popu: '84.5',
-    img: 'https://rpic.douyucdn.cn/z1608/05/13/507882_160805134513.jpg'
-};

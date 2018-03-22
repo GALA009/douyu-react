@@ -14,61 +14,56 @@ import Live from './lib/Live';
 import More from './lib/More';
 import BottomTip from './lib/BottomTip';
 
+import AppConstants from '../actions/AppConstants'
+import axios from 'axios'
+
+const BASE_URL = AppConstants.BASE_URL
+
 export default class Main extends React.Component {
 	constructor(props, context) {
 		super(props, context)
-		this.state = {}
+		this.state = {
+			roomData: [], // 房间数据
+		}
 	}
 
 	componentWillMount() {
-
 	}
-	componentDidMount(data) {
-		DY.callGetApi({url:'v1/live/lol', data: data}, function(error, res){
-			if(error) {
-				console.log(error)
-			}
-			else{
-				console.log(res.body)
-				console.log('999999999999999999999999');
-			}
+	componentDidMount() {
+		let that = this;
+		axios.get(BASE_URL + '/index', {
+		})
+		.then( (res) => {
+			that.setState({
+				roomData: res.data.data
+			})
+		})
+		.catch( (err) => {
+			console.log(err);
 		})
 	}
 	render() {
 		return (
 			<div >
-				<Header />
-				<div className='m-slider'>
-					<Swiper/>
+				<div id="js-app-container">
+					<Header />
+					<div className='m-slider'>
+						<Swiper />
+					</div>
+					{
+						this.state.roomData.map((item, key) => (
+						<Row title={item.title} link={ key === 0 ? '全部 >' :''}>
+							{
+								item.roomData.map((item2) => (
+									<Live imgUrl={item2.img} title={item2.typeName} dyname={item2.title} popu={item2.popu} />
+								))
+							}
+						</Row>
+						))
+					}
+					<More />
+					<BottomTip />
 				</div>
-				<Row title='最热直播' link='全部 >'>
-					<Live />
-					<Live />
-					<Live />
-					<Live />
-				</Row>
-				<Row title='元气领域'>
-					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
-					<Live />
-					<Live />
-					<Live />
-				</Row>
-
-				<Row title='时尚网游'>
-					<Live />
-					<Live />
-					<Live />
-					<Live />
-				</Row>
-
-				<Row title='鲜肉女神'>
-					<Live />
-					<Live />
-					<Live />
-					<Live />
-				</Row>
-                <More />
-				<BottomTip />
 			</div>
 		);
 	}
