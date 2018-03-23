@@ -6,6 +6,7 @@ require('styles/Detail.scss');
 
 import React from 'react';
 import axios from 'axios'
+
 import Video from './lib/Video';
 import Poster from './lib/Poster';
 import Row from './lib/Row';
@@ -33,10 +34,11 @@ export default class Detail extends React.Component {
 		axios.get(BASE_URL + '/detail', {
 		})
 		.then( (res) => {
-			console.log(res);
+			console.log(res.data);
 			that.setState({
-				data: res.data.data
-			})
+				data: res.data
+			});
+			console.log(that.state)
 		})
 		.catch( (err) => {
 			console.log(err);
@@ -44,8 +46,13 @@ export default class Detail extends React.Component {
 	}
 
 	render() {
-		const roomAuthor = this.state.roomAuthor;
-		const onlineNum = this.state.onlineNum;
+		console.log('11111')
+		const roomAuthor = this.state.data.roomAuthor;
+		const roomAuthorImg = this.state.data.roomAuthorImg;
+		const onlineNum = this.state.data.onlineNum;
+		const recommend = this.state.data.recommend || [];
+		console.log(this.state)
+		console.log(roomAuthor)
 
 
 		return (
@@ -56,7 +63,7 @@ export default class Detail extends React.Component {
 					<Poster />
 				</div>
 				<div className="info-area">
-					<InfoRoom src="https://apic.douyucdn.cn/upload/avatar/004/75/73/14_avatar_middle.jpg" dyName={roomAuthor} onlineNum={onlineNum}/>
+					<InfoRoom src={roomAuthorImg} dyName={roomAuthor} onlineNum={onlineNum}/>
 					<div className="info-handle">
 						<ImageGroup src="../images/hd-send.png" title="发弹幕">
 							<b className="split-line"></b>
@@ -67,19 +74,17 @@ export default class Detail extends React.Component {
 						<ImageGroup src="../images/hd-share.png" title="分享"/>
 					</div>
 				</div>
-				<Row title='同类直播'>
-					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
-					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
-					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
-					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
-				</Row>
-				<Row title='最热直播'>
-					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
-					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
-					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
-					<Live imgUrl='' title='魔兽世界' dyname='甜甜的果冻顶级术士开荒' popu='108.8'/>
-				</Row>
-
+				{
+					recommend.map((item, key) => (
+					<Row title={item.title} key={key}>
+						{
+							item.roomData.map((item2, key2) => (
+								<Live imgUrl={item2.img} title={item2.typeName} dyname={item2.title} popu={item2.popu} key={key2}/>
+							))
+						}
+					</Row>
+					))
+				}
 			</div>
 		);
 	}
